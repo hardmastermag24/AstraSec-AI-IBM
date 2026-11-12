@@ -1,0 +1,4 @@
+DATOS SINTETICOS: NO SON EVIDENCIAS REALES.
+Laboratorio de demostracion AstraSec AI.
+Alcance: solamente estos archivos ficticios. Sin conexiones ni escaneo de sistemas.
+Objetivo: practicar busqueda de eventos de autenticacion y elaboracion de reportes.

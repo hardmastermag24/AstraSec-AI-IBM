@@ -1,0 +1,104 @@
+{
+  "provider": "IBM watsonx Orchestrate",
+  "agent": "astrasec_sintetico",
+  "agent_id": "00000000-0000-4000-8000-000000000002",
+  "synthetic_data": true,
+  "input_sha256": "aef508bda781872e1f6f8f3269e98aa6e9b82d19d9d4d630a6e6bfe9b4e8e29c",
+  "sources": [
+    {
+      "id": "S1",
+      "archivo": "eventos_acceso_FICTICIOS.txt",
+      "sha256": "e9b08e3b73e65f775ee895a979a89419b7319f8771bdc01ae37b6dbcb860b427",
+      "contenido": "DATOS FICTICIOS PARA DEMOSTRACION DE ASTRASEC AI.\nNo corresponden a equipos, usuarios ni incidentes reales.\n\nLaboratorio: DEMO-AGENTES-ANIMADOS\nServidor ficticio: servidor-demo-01\nOrigen reservado para documentacion: 192.0.2.50\n\n2026-11-01T09:00:00Z autenticacion SSH fallida usuario=demo origen=192.0.2.50\n2026-11-01T09:00:15Z autenticacion SSH fallida usuario=demo origen=192.0.2.50\n2026-11-01T09:00:30Z autenticacion SSH fallida usuario=demo origen=192.0.2.50\n2026-11-01T09:00:45Z autenticacion SSH fallida usuario=demo origen=192.0.2.50\n2026-11-01T09:01:00Z autenticacion SSH fallida usuario=demo origen=192.0.2.50\n2026-11-01T09:01:15Z autenticacion SSH fallida usuario=demo origen=192.0.2.50\n\nResumen de prueba: seis intentos rechazados en 75 segundos. No se registra acceso exitoso.\nHipotesis para revision: posible repeticion automatizada; no confirma un ataque.\n"
+    },
+    {
+      "id": "S2",
+      "archivo": "inventario_FICTICIO.json",
+      "sha256": "28e5b140ffadee3a84157d61146598359aa1ba57771e09f9c45a1f57afca9a95",
+      "contenido": "{\n  \"tipo\": \"DATOS FICTICIOS PARA DEMOSTRACION\",\n  \"laboratorio\": \"DEMO-AGENTES-ANIMADOS\",\n  \"equipo\": \"servidor-demo-01\",\n  \"fuentes\": [\n    {\n      \"id\": \"DEMO-1\",\n      \"descripcion\": \"Seis intentos de autenticacion SSH rechazados en 75 segundos; sin acceso exitoso.\",\n      \"archivo\": \"eventos_acceso_FICTICIOS.txt\"\n    },\n    {\n      \"id\": \"DEMO-2\",\n      \"descripcion\": \"Configuracion ficticia declarada: acceso por clave publica; contrasenas deshabilitadas; revision humana pendiente.\"\n    }\n  ],\n  \"limitaciones\": \"Inventario inventado para probar carga, busqueda y animaciones. No representa una captura ni valida seguridad.\"\n}\n"
+    }
+  ],
+  "elapsed_seconds": 8.48,
+  "timestamp_utc": "2026-11-01T19:45:53.074271+00:00",
+  "raw_response": "{\n  \"hechos\": [\n    {\n      \"texto\": \"Se registraron seis intentos fallidos de autenticación SSH contra el servidor-demo-01 desde la IP 192.0.2.50 entre 09:00:00 y 09:01:15 del 2026-11-01.\",\n      \"fuentes\": [\"S1\"]\n    },\n    {\n      \"texto\": \"No se observó ningún inicio de sesión exitoso asociado a esos intentos.\",\n      \"fuentes\": [\"S1\"]\n    },\n    {\n      \"texto\": \"El inventario ficticio indica que el servidor-demo-01 está configurado para usar autenticación por clave pública y que la autenticación por contraseña está deshabilitada.\",\n      \"fuentes\": [\"S2\"]\n    }\n  ],\n  \"hipotesis\": [\n    {\n      \"texto\": \"Los intentos pueden corresponder a una herramienta automatizada que prueba credenciales en bucle, aunque no hay evidencia de compromiso.\",\n      \"fuentes\": [\"S1\"]\n    },\n    {\n      \"texto\": \"Dado que la autenticación por contraseña está deshabilitada, los intentos fallidos podrían deberse a una clave pública no autorizada o a un error de configuración del cliente.\",\n      \"fuentes\": [\"S2\"]\n    }\n  ],\n  \"recomendaciones\": [\n    {\n      \"texto\": \"Verificar que la clave pública utilizada por el usuario \\\"demo\\\" esté presente en el archivo authorized_keys del servidor.\",\n      \"fuentes\": [\"S2\"]\n    },\n    {\n      \"texto\": \"Revisar los registros del servidor para confirmar que no haya intentos posteriores exitosos y que no existan otras fuentes de conexión sospechosas.\",\n      \"fuentes\": [\"S1\"]\n    },\n    {\n      \"texto\": \"Documentar la intención de la configuración actual (uso exclusivo de claves públicas) y validar que corresponde a la política de seguridad del laboratorio.\",\n      \"fuentes\": [\"S2\"]\n    }\n  ],\n  \"limitaciones\": [\n    {\n      \"texto\": \"Los datos provienen de un entorno de laboratorio ficticio; no representan actividad real ni compromisos en sistemas productivos.\",\n      \"fuentes\": [\"S1\", \"S2\"]\n    },\n    {\n      \"texto\": \"Se carece de información sobre la naturaleza de la clave pública del usuario \\\"demo\\\" y sobre posibles procesos automatizados en el origen 192.0.2.50.\",\n      \"fuentes\": [\"S1\"]\n    }\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 972,
+    "completion_tokens": 560,
+    "total_tokens": 1532,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "analysis": {
+    "hechos": [
+      {
+        "texto": "Se registraron seis intentos fallidos de autenticación SSH contra el servidor-demo-01 desde la IP 192.0.2.50 entre 09:00:00 y 09:01:15 del 2026-11-01.",
+        "fuentes": [
+          "S1"
+        ]
+      },
+      {
+        "texto": "No se observó ningún inicio de sesión exitoso asociado a esos intentos.",
+        "fuentes": [
+          "S1"
+        ]
+      },
+      {
+        "texto": "El inventario ficticio indica que el servidor-demo-01 está configurado para usar autenticación por clave pública y que la autenticación por contraseña está deshabilitada.",
+        "fuentes": [
+          "S2"
+        ]
+      }
+    ],
+    "hipotesis": [
+      {
+        "texto": "Los intentos pueden corresponder a una herramienta automatizada que prueba credenciales en bucle, aunque no hay evidencia de compromiso.",
+        "fuentes": [
+          "S1"
+        ]
+      },
+      {
+        "texto": "Dado que la autenticación por contraseña está deshabilitada, los intentos fallidos podrían deberse a una clave pública no autorizada o a un error de configuración del cliente.",
+        "fuentes": [
+          "S2"
+        ]
+      }
+    ],
+    "recomendaciones": [
+      {
+        "texto": "Verificar que la clave pública utilizada por el usuario \"demo\" esté presente en el archivo authorized_keys del servidor.",
+        "fuentes": [
+          "S2"
+        ]
+      },
+      {
+        "texto": "Revisar los registros del servidor para confirmar que no haya intentos posteriores exitosos y que no existan otras fuentes de conexión sospechosas.",
+        "fuentes": [
+          "S1"
+        ]
+      },
+      {
+        "texto": "Documentar la intención de la configuración actual (uso exclusivo de claves públicas) y validar que corresponde a la política de seguridad del laboratorio.",
+        "fuentes": [
+          "S2"
+        ]
+      }
+    ],
+    "limitaciones": [
+      {
+        "texto": "Los datos provienen de un entorno de laboratorio ficticio; no representan actividad real ni compromisos en sistemas productivos.",
+        "fuentes": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "texto": "Se carece de información sobre la naturaleza de la clave pública del usuario \"demo\" y sobre posibles procesos automatizados en el origen 192.0.2.50.",
+        "fuentes": [
+          "S1"
+        ]
+      }
+    ]
+  },
+  "structure_valid": true
+}

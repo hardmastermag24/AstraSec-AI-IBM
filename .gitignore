@@ -1,0 +1,72 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Secretos y configuracion local
+.env
+*.key
+*.pem
+
+# Archivos cargados por el usuario
+uploads/
+data/uploads/
+
+# Reportes privados generados
+reports/
+data/reports/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs de sistema
+*.log
+
+# Bases de datos locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Credenciales IBM descargadas
+apikey.json
+
+data/evidencias/
+
+data/ultima_captura_local.json
+
+# Estado privado y capturas criptográficas
+data/private/
+data/ultima_captura_cripto.json
+.streamlit/secrets.toml
+.venv314/
+
+# Solo ejemplos sintéticos en control de versiones
+data/*
+!data/examples/
+!data/ejemplos_sinteticos/
+*.wav
+*.mp4
+.env.*
+!.env.example

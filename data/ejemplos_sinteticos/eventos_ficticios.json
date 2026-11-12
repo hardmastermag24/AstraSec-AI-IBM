@@ -1,0 +1,23 @@
+{
+  "aviso": "DATOS SINTETICOS, NO EVIDENCIAS REALES",
+  "eventos": [
+    {
+      "hora": "10:00:00",
+      "equipo": "servidor-ficticio",
+      "evento": "autenticacion fallida",
+      "usuario": "usuario_demo"
+    },
+    {
+      "hora": "10:01:00",
+      "equipo": "servidor-ficticio",
+      "evento": "autenticacion fallida",
+      "usuario": "usuario_demo"
+    },
+    {
+      "hora": "10:02:00",
+      "equipo": "servidor-ficticio",
+      "evento": "autenticacion correcta",
+      "usuario": "usuario_demo"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+DATOS FICTICIOS PARA DEMOSTRACION DE ASTRASEC AI.
+No corresponden a equipos, usuarios ni incidentes reales.
+
+Laboratorio: DEMO-AGENTES-ANIMADOS
+Servidor ficticio: servidor-demo-01
+Origen reservado para documentacion: 192.0.2.50
+
+2026-11-01T09:00:00Z autenticacion SSH fallida usuario=demo origen=192.0.2.50
+2026-11-01T09:00:15Z autenticacion SSH fallida usuario=demo origen=192.0.2.50
+2026-11-01T09:00:30Z autenticacion SSH fallida usuario=demo origen=192.0.2.50
+2026-11-01T09:00:45Z autenticacion SSH fallida usuario=demo origen=192.0.2.50
+2026-11-01T09:01:00Z autenticacion SSH fallida usuario=demo origen=192.0.2.50
+2026-11-01T09:01:15Z autenticacion SSH fallida usuario=demo origen=192.0.2.50
+
+Resumen de prueba: seis intentos rechazados en 75 segundos. No se registra acceso exitoso.
+Hipotesis para revision: posible repeticion automatizada; no confirma un ataque.

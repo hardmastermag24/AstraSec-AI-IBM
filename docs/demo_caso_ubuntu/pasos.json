@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Verificar la captura",
+    "input": "12 archivos TXT de ASTRA-UBUNTU y su manifiesto SHA-256.",
+    "action": "La aplicación verifica integridad y separa los archivos cuyo comando falló.",
+    "result": "101 observaciones de capacidades. paquetes_cripto.txt se excluye por exit_code 1.",
+    "say": "Primero comprobamos la calidad de la evidencia. Estas observaciones no son 101 vulnerabilidades ni prueban uso activo de cada algoritmo.",
+    "tool": "VMware / Ubuntu · Python · SHA-256"
+  },
+  {
+    "title": "Vincular el plan IBM",
+    "input": "Resumen minimizado de la captura y plan IBM archivado.",
+    "action": "Comprueba que el hash, las fuentes y las recomendaciones pertenecen al mismo caso.",
+    "result": "Tres recomendaciones vinculadas a E1, E2 y E102; plan validado sin repetir la consulta.",
+    "say": "La IA propone revisar configuración, inventariar dependencias y repetir la captura fallida. Las recomendaciones no se ejecutan automáticamente.",
+    "tool": "Plan IBM Orchestrate archivado · validación local"
+  },
+  {
+    "title": "Identificar la revisión",
+    "input": "Plan, fuentes y revisión técnica conservada.",
+    "action": "Distingue el ensayo técnico de una revisión humana real y solicita responsable, decisión y justificación.",
+    "result": "Estado del caso: borrador; revisión humana pendiente.",
+    "say": "El registro mostrado es un ensayo técnico. El selector inferior permite una nueva revisión; no significa que una persona ya haya aprobado el caso.",
+    "tool": "Formulario de revisión · Streamlit"
+  },
+  {
+    "title": "Bloquear una revisión incompleta",
+    "input": "Intento de registro sin confirmar la revisión de fuentes.",
+    "action": "La validación detiene el registro y muestra el requisito que falta.",
+    "result": "Mensaje: confirma la revisión de fuentes antes de registrarla.",
+    "say": "Este control evita registrar una confirmación incompleta. Si cambia el plan, debe volver a revisarse.",
+    "tool": "Validación local · reglas de revisión"
+  },
+  {
+    "title": "Guardar y exportar la versión",
+    "input": "Expediente del ensayo técnico, con sus límites y trazas.",
+    "action": "Guarda explícitamente una revisión y habilita las descargas asociadas a esa versión.",
+    "result": "Revisión 1 guardada; ZIP, PDF y Markdown disponibles.",
+    "say": "Guardar conserva el expediente; no convierte el ensayo en aprobación humana. El ZIP integra reporte, datos, traza, recibo y manifiesto.",
+    "tool": "SQLite · SHA-256 · PDF / ZIP"
+  },
+  {
+    "title": "Recuperar y presentar el resultado",
+    "input": "Expediente guardado, revisión 1.",
+    "action": "Abre el mismo caso desde Reportes después de reiniciar y recupera sus descargas.",
+    "result": "Caso y versión conservados; reporte reproducible del ensayo técnico.",
+    "say": "Cerramos el recorrido recuperando la versión guardada. El siguiente paso real es asignar un revisor y repetir la captura fallida.",
+    "tool": "Reportes · SQLite · PDF / ZIP"
+  }
+]

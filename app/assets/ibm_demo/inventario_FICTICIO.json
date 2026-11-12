@@ -1,0 +1,17 @@
+{
+  "tipo": "DATOS FICTICIOS PARA DEMOSTRACION",
+  "laboratorio": "DEMO-AGENTES-ANIMADOS",
+  "equipo": "servidor-demo-01",
+  "fuentes": [
+    {
+      "id": "DEMO-1",
+      "descripcion": "Seis intentos de autenticacion SSH rechazados en 75 segundos; sin acceso exitoso.",
+      "archivo": "eventos_acceso_FICTICIOS.txt"
+    },
+    {
+      "id": "DEMO-2",
+      "descripcion": "Configuracion ficticia declarada: acceso por clave publica; contrasenas deshabilitadas; revision humana pendiente."
+    }
+  ],
+  "limitaciones": "Inventario inventado para probar carga, busqueda y animaciones. No representa una captura ni valida seguridad."
+}
